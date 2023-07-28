@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:translations/l10n/locale_keys.g.dart';
 
 class CounterPage extends StatefulWidget {
   const CounterPage({required this.title, super.key});
@@ -29,8 +31,8 @@ class _CounterPageState extends State<CounterPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            Text(
+              LocaleKeys.pushTextTitle.tr(),
             ),
             Text(
               '$_counter',
@@ -41,7 +43,7 @@ class _CounterPageState extends State<CounterPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
-        tooltip: 'Increment',
+        tooltip: LocaleKeys.pushTextAction.tr(),
         child: const Icon(Icons.add),
       ),
     );
